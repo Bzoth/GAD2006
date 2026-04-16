@@ -86,6 +86,7 @@ void ACOAAvatar::CheckForStamina(float value)
 	{
 		RunReleased();
 		bStaminaDrained = true;
+		GetCharacterMovement()->MaxWalkSpeed = WalkSpeed * 0.2f;
 	}
 }
 
@@ -112,6 +113,7 @@ void ACOAAvatar::Tick(float DeltaTime)
 			if (Stamina >= MaxStamina)
 			{
 				bStaminaDrained = false;
+				GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
 			}
 		}
 		

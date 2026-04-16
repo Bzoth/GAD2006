@@ -11,6 +11,7 @@
 /**
  * 
  */
+
 UCLASS()
 class CLASHOFAVATARS_API ACOAAvatar : public ACOABaseCharacter
 {
