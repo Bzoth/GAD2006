@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -7,11 +5,13 @@
 #include "Components/BoxComponent.h"
 #include "GameSlot.generated.h"
 
+// Forward declaration to avoid circular dependency
+class AUnitBase;
 
 USTRUCT(Blueprintable)
 struct FSGridPosition
 {
-	GENERATED_USTRUCT_BODY()
+	GENERATED_USTRUCT_BODY();
 
 	FSGridPosition() {}
 	FSGridPosition(int col, int row) : Col(col), Row(row) {}
@@ -36,9 +36,8 @@ UCLASS()
 class AGameSlot : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
+
+public:
 	AGameSlot();
 
 	UPROPERTY(EditAnywhere)
@@ -46,19 +45,24 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	UStaticMeshComponent* Plane;
-	
+
+	UPROPERTY(BlueprintReadWrite)
 	FSGridPosition GridPosition;
-	EGridState GridState;
+
+	UPROPERTY(VisibleAnywhere)
+	AUnitBase* Unit;
 
 	UFUNCTION()
 	void SetState(EGridState NewState);
 
+	void SpawnUnitHere(TSubclassOf<AUnitBase>& UnitClass);
+
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+private:
+	EGridState GridState;
 
+	UFUNCTION()
+	void OnGridClicked(AActor* TouchedActor, FKey ButtonPressed);
 };
