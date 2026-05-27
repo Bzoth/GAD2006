@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\HW3.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HW3.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\HW3Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\HW3">
+      <UniqueIdentifier>{0821B93D-32BD-3727-8B20-7037291C23E1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\HW3\HW3.Build.cs">
+      <Filter>Source\HW3</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\HW3\HW3.cpp">
+      <Filter>Source\HW3</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HW3\HW3.h">
+      <Filter>Source\HW3</Filter>
+    </ClInclude>
+    <Filter Include="Source\HW3\Private">
+      <UniqueIdentifier>{8C315DEA-AC30-3F6D-8696-EAD201A10CE3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\HW3\Private\GameGrid.cpp">
+      <Filter>Source\HW3\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HW3\Private\GameGrid.h">
+      <Filter>Source\HW3\Private</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\HW3\Private\GameSlot.cpp">
+      <Filter>Source\HW3\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\HW3\Private\GameSlot.h">
+      <Filter>Source\HW3\Private</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
